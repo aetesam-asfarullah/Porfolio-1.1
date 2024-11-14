@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-editor-text font-sans;
+    background: #1a1a1a; /* Darker background color */
+  }
+}
+
+@layer components {
+  .project-card {
+    @apply relative overflow-hidden rounded-lg bg-editor-sidebar/95 backdrop-blur-sm p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl;
+  }
+  
+  .nav-link {
+    @apply cursor-pointer font-mono text-sm text-editor-text/70 transition-colors hover:text-editor-accent;
+  }
+
+  .section-heading {
+    @apply font-mono text-2xl font-semibold text-editor-accent mb-8;
+  }
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  @apply fixed pointer-events-none z-50 mix-blend-difference;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+/* Matrix Rain Styles */
+canvas {
+  image-rendering: pixelated;
+}
