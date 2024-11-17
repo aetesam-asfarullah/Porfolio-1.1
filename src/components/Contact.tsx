@@ -21,7 +21,6 @@ const Contact = () => {
         'service_p54zx7g',  // Service ID from EmailJS
         'template_k7umlah',   // Template ID from EmailJS
         {
-          to_name: 'Aetesam',
           to_email: 'aetesamasfar18@gmail.com',
           from_name: formData.name,
           from_email: formData.email,
